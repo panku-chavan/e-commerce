@@ -28,10 +28,11 @@ app.use("/api/v1", user);
 app.use("/api/v1", order);
 app.use("/api/v1", payment);
 
-app.use(express.static(path.join(__dirname, "./client")));
+//app.use(express.static(path.join(__dirname, "./client")));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./client/index.html"));
+ // res.sendFile(path.resolve(__dirname, "./client/index.html"));
+ res.send("<h1>e-commerce api</h1>")
 });
 
 // Middleware for Errors
